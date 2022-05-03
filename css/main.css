@@ -58,18 +58,11 @@ div {
 	justify-content: center;
 }
 
-.wrapper {
-  padding: 20px;
-  background: #eaeaea;
-  max-width: 400px;
-  margin: 50px auto;
-}
-
 .bookdescription {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  max-width: 150px;
+  max-width: 200px;
 }
 
 tr.dotted, td.dotted {
