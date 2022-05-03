@@ -76,7 +76,7 @@
                 
                 #Book desription
                 echo "<td class=\"dotted\">";
-                    echo "<p class=\"book-description\">";
+                    echo "<p class=\"shorter-book-description\">";
                         echo $row['Description'];
                     echo "</p>";
                 echo "</td>";
