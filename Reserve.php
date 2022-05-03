@@ -111,8 +111,8 @@
 							 
 		$Result = $Query->fetch_assoc();
 		
-		$Query = $db->Query(sprintf("INSERT INTO bookreserve(BookID, Username, ReservedDate) 
-										VALUES ('%s', '%s', '%s')", $Result['BookID'], $_SESSION['Username'],date('Y-m-d H:i:s')
+		$Query = $db->Query(sprintf("INSERT INTO bookreserve(BookID, UserID, ReservedDate) 
+										VALUES ('%s', '%s', '%s')", $Result['BookID'], $_SESSION['UserID'],date('Y-m-d H:i:s')
 									 )
 							 );
 	?>
