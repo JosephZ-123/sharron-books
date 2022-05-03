@@ -103,13 +103,9 @@
 	
 	<br>
 
-    <div class="content">
         <h3 class = "heading" style="text-decoration: underline;"> Reserved List </h3>
 				<p>Your reserved books are below:</p>
-	  
-        </form>
-	</div>
-	<?php
+	  <?php
 				if(isset($_SESSION['Username']))
 		{
 			$Username = $_SESSION['Username'];
@@ -158,6 +154,7 @@
 			echo "</div>";
 		} // if
 		?>
+
     
     <br>
 	
