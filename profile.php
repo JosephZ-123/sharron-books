@@ -107,16 +107,54 @@
         <h3 class = "heading" style="text-decoration: underline;"> Reserved List </h3>
             <div>
 				<p>Your reserved books are below:</p>
-				<table>
-					<tr>
-						<td>Book 1:</td>
-						<td><?=$title1?></td>
-					</tr>
-                    <tr>
-						<td>Book 2:</td>
-						<td><?=$title2?></td>
-					</tr>
-				</table>
+				<p>Your reserved books are below:</p>
+				if(isset($_SESSION['Username']))
+		{
+			$Username = $_SESSION['Username'];
+			echo "<br><br>";
+			echo "<div class='Form'><h1>Hello " . $Username . "<br></h1></div>";
+			echo "<div class='Form'><h2>You have successfully logged in. <br></h2></div>";
+			echo "<div class='Form'><h2>What would you like to do? <br></h2></div>";
+			echo "<div class='Form'><h3><a href='logout.php'>Not you? Logout.</a> <br></h3></div>";
+			echo "<br><br>";
+			
+			$Query = $db->Query(sprintf("SELECT books.BookID, books.Title 
+											FROM bookreserve 
+											INNER JOIN books 
+											ON bookreserve.BookID=books.BookID 
+											WHERE bookreserve.Username = '%s'", $_SESSION['Username']));
+			
+			if ($Query->num_rows == 0) 
+			{
+				echo "<div class='Form2'><h2>No books have been reserved.</h2></div>"; 
+			} // if
+			
+			
+			//If books match with what the user wants, then display the results.
+			while($Row = mysqli_fetch_array($Query, MYSQL_BOTH))
+			{
+				echo "<table border=\"2\"align=\"center\"width=\"600\">";
+				echo("</td><td>");
+				echo "<div class=\"Form2\">";
+				echo '<br /> BookID:       ' .$Row['BookID'];  
+				echo '<br /> Book Title: ' .$Row['Title'];  
+				echo '<br /> <br />';
+				echo("</tr>\n");
+				echo "</div>";
+				echo "<br>";
+			} // while
+			echo "</table>\n";
+			
+			echo "</select><br><br>";
+			
+			echo "<div class=\"Form2\">";
+			echo "<form action=\"Unreserve.php\" method=\"POST\">";
+			echo "The Book's ID:<br>";
+			echo "<input type=\"text\" name=\"BookID\" placeholder=\"434-343-23\" required ><br>";
+			echo "<input type=\"submit\" value=\"Submit\">";
+			echo "</form>";
+			echo "</div>";
+		} // if
 			</div>
         </form>
 	</div>
