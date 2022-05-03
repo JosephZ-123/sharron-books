@@ -62,7 +62,8 @@ div {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  max-length: 500px;
+  max-width: 100px;
+  max-length: 100px;
 }
 
 tr.dotted, td.dotted {
