@@ -81,7 +81,9 @@
 					echo "</form>";
 
 					# Book Description
-					echo "<p class = \"book-description\">" . $description . "</p>";
+					<div class="wrapper">
+						echo "<p class = \"bookdescription\">" . $description . "</p>";
+					</div>
 
 					# Info
 					echo "<p class=\"book-info\">";
