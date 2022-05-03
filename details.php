@@ -38,6 +38,7 @@
 		?>
 
 		<div class="content">
+			<div class="wrapper">
 			<?php
 		
 				// Set form variables
@@ -81,9 +82,7 @@
 					echo "</form>";
 
 					# Book Description
-					<div class="wrapper">
-						echo "<p class = \"bookdescription\">" . $description . "</p>";
-					</div>
+					echo "<p class = \"bookdescription\">" . $description . "</p>";
 
 					# Info
 					echo "<p class=\"book-info\">";
@@ -99,6 +98,7 @@
 					echo("<p class=\"error\"> error: no book selected. <p>");
 				}
 			?>
+			</div>
 		</div>
 	</div>
 	
