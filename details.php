@@ -82,7 +82,7 @@
 					echo "</form>";
 
 					# Book Description
-					echo "<p class = \"bookdescription\">" . $description . "</p>";
+					echo "<p class = \"book-description\">" . $description . "</p>";
 
 					# Info
 					echo "<p class=\"book-info\">";
