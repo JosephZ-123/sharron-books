@@ -58,11 +58,11 @@ div {
 	justify-content: center;
 }
 
-.bookdescription {
+.shorter-book-description {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  max-width: 200px;
+  max-width: 1000px;
 }
 
 tr.dotted, td.dotted {
