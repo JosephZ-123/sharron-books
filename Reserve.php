@@ -116,14 +116,14 @@
 		$Query = $db->Query(sprintf("SELECT UserID 
 										From users 
 										WHERE UserID = '%s'",
-										$db->escape_string($_POST['UserID'])
+										$db->escape_string($_POST['userID'])
 									 )
 							 );
 		}
 		$Result = $Query->fetch_assoc();
 		
 		$sql = $db->prepare("INSERT INTO bookreserve(BookID, UserID, ReservedDate) 
-					VALUES ('%s', '%s', '%s')", $Result['BookID'], $_SESSION['UserID'],date('Y-m-d H:i:s')
+					VALUES ('%s', '%s', '%s')", $Result['BookID'], $Result['UserID'],date('Y-m-d H:i:s')
 				   );
 	?>
 	
