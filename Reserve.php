@@ -112,7 +112,6 @@
 		$Query = $db->Query(sprintf("SELECT UserID 
 										From users 
 										WHERE UserID = '%s'",
-										$db->escape_string($_POST['UserID'])
 									 )
 							 );
 							 
