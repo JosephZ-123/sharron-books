@@ -66,6 +66,47 @@ div {
   max-length: 300px;
 }
 
+.main 
+{
+	position: relative;
+	top: 180px;
+	text-align: center;
+}
+
+.container 
+{
+	max-width: 940px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.clearfix 
+{
+	clear: both;
+}
+
+.Form
+{
+	color: #000000;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 50;
+	font-size: 10px;
+	text-align: center;
+	margin-bottom: 25px; /* Margin from footer */
+	text-transform: uppercase;
+}
+
+.Form2
+{
+	color: #000000;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 50;
+	font-size: 10px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
 tr.dotted, td.dotted {
 	border-top: 1px dotted black;
 }
