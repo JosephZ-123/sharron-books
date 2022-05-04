@@ -36,14 +36,12 @@
 			create_home_header();
 		?>
 	
-	<div class="backgroundfixReserve">
 		<div class="container">  
 			<div class="main">
 				<h1>Reserve a Book</h1>
 				<p class="btn-primary">The place where to reserve the books that you want.</p>
 			</div>
 		</div>
-	</div>
 	
 	<!-- Start of PHP -->
 	<?php
@@ -59,7 +57,6 @@
 			echo "<div class='Form'><h3><a href='Reservation.php'>Try again</a> <br></h3></div>";
 			echo "<div class='Form'><h4><a href='includes/logout.php'>Want to log out?</a> <br></h4></div>";
 			echo "<div class=\"clearfix\"></div>";
-			echo "<div  class=\"footer\">";
 			echo "<div class=\"container\">";
 			echo "</div>";
 			echo "</div>";
@@ -84,10 +81,6 @@
 			echo "<div class='Form'><h3><a href='includes/logout.php'>Want to log out?</a> <br></h3></div>";
 			
 			echo "<div class=\"clearfix\"></div>";
-			echo "<div  class=\"footer\">";
-			echo "<div class=\"container\">";
-			echo "</div>";
-			echo "</div>";
 			exit;
 		}
 							 
@@ -112,7 +105,7 @@
 		$Result = $Query->fetch_assoc();
 		
 		$Query = $db->Query(sprintf("INSERT INTO bookreserve(BookID, UserID, ReservedDate) 
-										VALUES ('%s', '%s', '%s')", $Result['BookID'], $_SESSION['UserID'],date('Y-m-d H:i:s')
+										VALUES ('%s', '%s', '%s')", $Result['bookID'], $_SESSION['UserID'],date('Y-m-d H:i:s')
 									 )
 							 );
 	?>
