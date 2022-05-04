@@ -54,6 +54,7 @@
 			echo "<br>";
 			echo "<div class='Form'><h3><a href='login-form.php'>Log into your account</a> <br></h3></div>";
 			echo "<div class=\"clearfix\"></div>";
+			exit;
    		} // if
 
 		//Check to see if the user entered something.
