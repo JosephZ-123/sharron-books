@@ -48,10 +48,14 @@
 	
 		require('includes/config.php');
 		
-		if (session_status() == PHP_SESSION_NONE) // start session if not started already
-    		{
-        		session_start();
-    		}
+		if(!isset($_SESSION['login_user']) && $_SESSION['login_admin'] == false) 
+		{
+			echo "<br>";
+			echo "<div class='Form2'><h2>You're not logged in, please log in.</h2></div>";
+			echo "<br>";
+			echo "<div class='Form'><h3><a href='login-form.php'>Log into your account</a> <br></h3></div>";
+			echo "<div class=\"clearfix\"></div>";
+   		} // if
 
 		//Check to see if the user entered something.
 		if($_SERVER['REQUEST_METHOD'] != 'POST' || empty($_POST)) 
@@ -69,14 +73,6 @@
 			exit;
 		}
 		
-		if(!isset($_SESSION['Username'])) 
-		{
-			echo "<br>";
-			echo "<div class='Form2'><h2>You're not logged in, please log in.</h2></div>";
-			echo "<br>";
-			echo "<div class='Form'><h3><a href='login-form.php'>Log into your account</a> <br></h3></div>";
-			echo "<div class=\"clearfix\"></div>";
-   		} // if
 		
 		//Check if book exists.
 		$Query = $db->Query(sprintf("SELECT * 
