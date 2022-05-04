@@ -66,6 +66,20 @@ div {
   max-length: 300px;
 }
 
+.main 
+{
+	position: relative;
+	top: 180px;
+	text-align: center;
+}
+
+.container 
+{
+	max-width: 940px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
 tr.dotted, td.dotted {
 	border-top: 1px dotted black;
 }
