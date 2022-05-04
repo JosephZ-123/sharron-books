@@ -112,7 +112,7 @@
 			echo "<br><br>";
 			echo "<div class='Form'><h1>Hello " . $Username . "<br></h1></div>";
 			echo "<div class='Form'><h3><a href='includes/logout.php'>Not you? Logout.</a> <br></h3></div>";
-			echo "<div class='Form'><h3 class = "heading" style="text-decoration: underline;"> Reserved List </h3>";
+			echo "<div class='Form'><h2> Reserved List </h2>";
 			echo "<p>Your reserved books are below:</p>";
 			echo "<br><br>";
 			
@@ -148,7 +148,7 @@
 			echo "<div class=\"Form2\">";
 			echo "<form action=\"Unreserve.php\" method=\"POST\">";
 			echo "The Book's ID:<br>";
-			echo "<input type=\"text\" name=\"BookID\" placeholder=\"434-343-23\" required ><br>";
+			echo "<input type=\"text\" name=\"BookID\" required ><br>";
 			echo "<input type=\"submit\" value=\"Submit\">";
 			echo "</form>";
 			echo "</div>";
