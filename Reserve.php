@@ -69,10 +69,13 @@
 			exit;
 		}
 		
-		if(!isset($_SESSION['UserID'])) 
+		if(!isset($_SESSION['Username'])) 
 		{
-			header('Location:login-form.php');
-        		exit;
+			echo "<br>";
+			echo "<div class='Form2'><h2>You're not logged in, please log in.</h2></div>";
+			echo "<br>";
+			echo "<div class='Form'><h3><a href='login-form.php'>Log into your account</a> <br></h3></div>";
+			echo "<div class=\"clearfix\"></div>";
    		} // if
 		
 		//Check if book exists.
