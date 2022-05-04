@@ -69,7 +69,7 @@
 			exit;
 		}
 		
-		if(!isset($_SESSION['login_user'])) 
+		if(!isset($_SESSION['UserID'])) 
 		{
 			header('Location:login-form.php');
         		exit;
