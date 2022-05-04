@@ -104,8 +104,7 @@
 	<br>
 
     <div class="content">
-        <h3 class = "heading" style="text-decoration: underline;"> Reserved List </h3>
-				<p>Your reserved books are below:</p>
+	    
 	    <?php
 		if(isset($_SESSION['login_user']))
 		{
@@ -113,6 +112,8 @@
 			echo "<br><br>";
 			echo "<div class='Form'><h1>Hello " . $Username . "<br></h1></div>";
 			echo "<div class='Form'><h3><a href='includes/logout.php'>Not you? Logout.</a> <br></h3></div>";
+			echo "<h3 class = "heading" style="text-decoration: underline;"> Reserved List </h3>";
+			echo "<p>Your reserved books are below:</p>";
 			echo "<br><br>";
 			
 			$Query = $db->Query(sprintf("SELECT books.BookID, books.Title 
