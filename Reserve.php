@@ -123,9 +123,8 @@
 		$Result = $Query->fetch_assoc();
 		
 		$sql = $db->prepare("INSERT INTO bookreserve(BookID, UserID, ReservedDate) 
-										VALUES ('%s', '%s', '%s')", $Result['BookID'], $_SESSION['UserID'],date('Y-m-d H:i:s')
-									 )
-							 );
+					VALUES ('%s', '%s', '%s')", $Result['BookID'], $_SESSION['UserID'],date('Y-m-d H:i:s')
+				   );
 	?>
 	
 	<br><br>
