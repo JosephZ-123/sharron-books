@@ -109,7 +109,7 @@
 	    <?php
 		if(isset($_SESSION['login_user']))
 		{
-			$Username = $_SESSION['login_user'];
+			$Username = $_SESSION['login_firstname'];
 			echo "<br><br>";
 			echo "<div class='Form'><h1>Hello " . $Username . "<br></h1></div>";
 			echo "<div class='Form'><h3><a href='includes/logout.php'>Not you? Logout.</a> <br></h3></div>";
