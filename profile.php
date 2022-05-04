@@ -109,9 +109,9 @@
 	    <?php
 		if(isset($_SESSION['login_user']))
 		{
-			$UserID = $_SESSION['login_user'];
+			$Username = $_SESSION['login_user'];
 			echo "<br><br>";
-			echo "<div class='Form'><h1>Hello " . $UserID . "<br></h1></div>";
+			echo "<div class='Form'><h1>Hello " . $Username . "<br></h1></div>";
 			echo "<div class='Form'><h3><a href='includes/logout.php'>Not you? Logout.</a> <br></h3></div>";
 			echo "<br><br>";
 			
@@ -128,7 +128,7 @@
 			
 			
 			//If books match with what the user wants, then display the results.
-			while($Row = mysqli_fetch_array($Query, MYSQL_BOTH))
+			while($Row = mysqli_fetch_array($Query))
 			{
 				echo "<table border=\"2\"align=\"center\"width=\"600\">";
 				echo("</td><td>");
