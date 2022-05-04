@@ -69,7 +69,7 @@
 			echo "<br>";
 			echo "<div class='Form2'><h2>You're not logged in, please log in.</h2></div>";
 			echo "<br>";
-			echo "<div class='Form'><h3><a href='Login.php'>Log into your account</a> <br></h3></div>";
+			echo "<div class='Form'><h3><a href='includes/login.php'>Log into your account</a> <br></h3></div>";
 			echo "<div class=\"clearfix\"></div>";
 			exit;
 		}
