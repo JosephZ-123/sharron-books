@@ -64,6 +64,16 @@
 			exit;
 		}
 		
+		if(!isset($_SESSION['UserID'])) 
+		{
+			echo "<br>";
+			echo "<div class='Form2'><h2>You're not logged in, please log in.</h2></div>";
+			echo "<br>";
+			echo "<div class='Form'><h3><a href='Login.php'>Log into your account</a> <br></h3></div>";
+			echo "<div class=\"clearfix\"></div>";
+			exit;
+		}
+		
 		//Check if book exists.
 		$Query = $db->Query(sprintf("SELECT * 
 										FROM books 
@@ -82,10 +92,6 @@
 			echo "<div class='Form'><h3><a href='includes/logout.php'>Want to log out?</a> <br></h3></div>";
 			
 			echo "<div class=\"clearfix\"></div>";
-			echo "<div  class=\"footer\">";
-			echo "<div class=\"container\">";
-			echo "</div>";
-			echo "</div>";
 			exit;
 		}
 							 
@@ -104,15 +110,6 @@
 										From books 
 										WHERE BookID = '%s'",
 										$db->escape_string($_POST['bookID'])
-									 )
-							 );
-							 
-		$Result = $Query->fetch_assoc();
-		
-		$Query = $db->Query(sprintf("SELECT UserID 
-										From users 
-										WHERE UserID = '%s'",
-					    					$db->escape_string($_GET['UserID'])
 									 )
 							 );
 							 
