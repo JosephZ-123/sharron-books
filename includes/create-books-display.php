@@ -97,6 +97,7 @@
                 echo "<td class=\"dotted\">";
                 echo "<form action=\"reserve.php\" method=\"POST\">";
                 echo "<input type=\"hidden\" name=\"bookID\" value=\"" . $row['BookID'] . "\">";
+                echo "<input type=\"hidden\" name=\"userID\" value=\"" . $row['UserID'] . "\">";
                 echo "<input type=\"submit\" value=\"reserve\" name=\"reserve\">";
                 echo "</form>";
                 #Contains a hidden form that will send bookID to details.php
