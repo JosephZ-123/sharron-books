@@ -50,8 +50,8 @@
 		require('includes/config.php');
 												
 		$Query = $db->Query(sprintf("DELETE FROM bookreverse 
-											  WHERE BookID = '%s'", 
-											  $db->escape_string($_POST['bookID'])));
+											  WHERE CONCAT(`bookreserve`.`BookID`) = '%s' 
+											  AND `bookreserve`.`UserID` = $_SESSION['login_user'];
 											
 		echo "<br>";
 		echo "<div class='Form2'><h2>Book has been unreserved if code was correct.</h2></div>";
