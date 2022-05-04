@@ -107,7 +107,7 @@
         <h3 class = "heading" style="text-decoration: underline;"> Reserved List </h3>
             <div>
 				<p>Your reserved books are below:</p>
-				if(isset($_SESSION['UserID']))
+				if(isset($_SESSION['login_user']))
 		{
 			$UserID = $_SESSION['UserID'];
 			echo "<br><br>";
@@ -119,7 +119,7 @@
 											FROM bookreserve 
 											INNER JOIN books 
 											ON bookreserve.BookID=books.BookID 
-											WHERE bookreserve.UserID = '%s'", $_SESSION['UserID']));
+											WHERE bookreserve.UserID = '%s'", $_SESSION['login_user']));
 			
 			if ($Query->num_rows == 0) 
 			{
