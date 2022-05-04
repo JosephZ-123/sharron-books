@@ -57,6 +57,7 @@
 			echo "<div class='Form'><h3><a href='Reservation.php'>Try again</a> <br></h3></div>";
 			echo "<div class='Form'><h4><a href='includes/logout.php'>Want to log out?</a> <br></h4></div>";
 			echo "<div class=\"clearfix\"></div>";
+			echo "<div  class=\"footer\">";
 			echo "<div class=\"container\">";
 			echo "</div>";
 			echo "</div>";
@@ -81,6 +82,10 @@
 			echo "<div class='Form'><h3><a href='includes/logout.php'>Want to log out?</a> <br></h3></div>";
 			
 			echo "<div class=\"clearfix\"></div>";
+			echo "<div  class=\"footer\">";
+			echo "<div class=\"container\">";
+			echo "</div>";
+			echo "</div>";
 			exit;
 		}
 							 
