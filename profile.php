@@ -105,13 +105,12 @@
 
     <div class="content">
         <h3 class = "heading" style="text-decoration: underline;"> Reserved List </h3>
-            <div>
 				<p>Your reserved books are below:</p>
 				if(isset($_SESSION['login_user']))
 		{
-			$UserID = $_SESSION['UserID'];
+			$UserID = $_SESSION['login_user'];
 			echo "<br><br>";
-			echo "<div class='Form'><h1>Hello " . $Username . "<br></h1></div>";
+			echo "<div class='Form'><h1>Hello " . $UserID . "<br></h1></div>";
 			echo "<div class='Form'><h3><a href='includes/logout.php'>Not you? Logout.</a> <br></h3></div>";
 			echo "<br><br>";
 			
@@ -152,7 +151,6 @@
 			echo "</form>";
 			echo "</div>";
 		} // if
-			</div>
         </form>
 	</div>
     
