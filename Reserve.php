@@ -10,6 +10,7 @@
 	include_once ('includes/create-home-header.php');
 	include_once ('includes/create-hotbar.php');
 	include_once ('includes/create-footer.php');
+	require_once ('includes/config.php');
 	include_once ('includes/start-session.php');
 ?>
 
@@ -45,10 +46,8 @@
 	
 	<!-- Start of PHP -->
 	<?php
-	
-		require('includes/config.php');
 		
-		if(!isset($_SESSION['login_user']) && $_SESSION['login_admin'] == false) 
+		if(!isset($_SESSION['login_user'])) 
 		{
 			echo "<br>";
 			echo "<div class='Form2'><h2>You're not logged in, please log in.</h2></div>";
@@ -110,6 +109,12 @@
 										From books 
 										WHERE BookID = '%s'",
 										$db->escape_string($_POST['bookID'])
+									 )
+							 );
+		$Query = $db->Query(sprintf("SELECT UserID 
+										From users 
+										WHERE UserID = '%s'",
+										$db->escape_string($_POST['UserID'])
 									 )
 							 );
 							 
