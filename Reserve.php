@@ -113,9 +113,10 @@
 							 );
 		$Result = $Query->fetch_assoc();
 		
-		$sql = $db->prepare("INSERT INTO bookreserve(BookID, UserID, ReservedDate) 
+		$Query = $db->Query(sprintf("INSERT INTO bookreserve(BookID, UserID, ReservedDate) 
 					VALUES ('%s', '%s', '%s')", $Result['BookID'], $_SESSION['login_user'],date('Y-m-d H:i:s')
-				   );
+						    )
+					);
 	?>
 	
 	<br><br>
