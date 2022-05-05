@@ -52,7 +52,7 @@
 		require('includes/config.php');
 												
 		$Query = $db->Query(sprintf("DELETE FROM bookreserve 
-										WHERE `bookreserve`.`BookID` = '%s'", 
+										WHERE `bookreserve`.`BookID` = '%s' HAVING UserID='%s'", $_POST['bookID'], $_SESSION['login_user']
 										$db->escape_string($_POST['BookID'])));
 											
 		echo "<br>";
