@@ -77,9 +77,7 @@
                 #Book desription
                 echo "<td class=\"dotted\">";
                     echo "<p class=\"book-description\">";
-                <?php
-                    $out = strlen($row['Description']) > 50 ? substr($row['Description'],0,50)."..." : $row['Description'];
-        ?>
+                        echo $row['Description'];
                     echo "</p>";
                 echo "</td>";
                 
